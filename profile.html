@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">💬 ChatApp</div>
+        <ul>
+          <a href="#"><li>Home</li></a>
+          <a href="profile.html"><li>About</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="inbox-list">
+        <img src="./image/profile.jpg" alt="" class="profile-pic">
+        <h3 class="username">Bewnet</h3>
+        <h4 class="last-seen">Don`t know</h4>
+      </div>
+      <div class="chat-box">
+        <div class="chat-header">
+          <span class="exit-arrow">&lAarr;</span>
+          <img src="./image/profile.jpg" alt="User" class="profile-pic" />
+          <h2 class="name">John Doe</h2>
+          <h4 class="status">Online</h4>
+          <span class="options">&#9881;</span>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-board">
+          <div class="message received">
+            <p>Hey, how's it going?</p>
+            <span class="timestamp">10:30 AM</span>
+          </div>
+          <div class="message sent">
+            <p>I'm good! How about you?</p>
+            <span class="timestamp">10:31 AM</span>
+          </div>
+          <div class="message received">
+            <p>I'm doing great. Just working on a project.</p>
+            <span class="timestamp">10:35 AM</span>
+          </div>
+        </div>
+
+        <!-- Message Input -->
+        <div class="chat-input">
+          <input type="text" placeholder="Type a message..." />
+          <button class="send-btn">➤</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

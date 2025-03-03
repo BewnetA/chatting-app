@@ -1,0 +1,169 @@
+:root {
+    --background-color: #020307;
+    --header-background: #042342;
+    --text-color: #fff;
+    --primary-color: #00aeff;
+    --button-bg: rgba(117, 243, 252, 0.1);
+}
+
+body {
+    background: var(--background-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--header-background);
+    padding: 15px 50px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+header ul a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+header ul a:hover {
+    color: var(--primary-color);
+}
+
+button.sing-up {
+    background: var(--button-bg);
+    color: var(--text-color);
+    border-radius: 8px;
+    border: 2px solid var(--primary-color);
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button.sing-up:hover {
+    background-color: var(--primary-color);
+    color: #000;
+}
+
+/* Hero Section */
+.background.intro-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 90vh;
+    background: url("./image/hero-section.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.background.intro-image h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+button {
+    background: var(--button-bg);
+    color: var(--text-color);
+    border-radius: 8px;
+    border: 2px solid var(--primary-color);
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Sections */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+section div {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+section div:hover {
+    transform: translateY(-5px);
+}
+
+section div h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+section div p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+section div img{
+    float: left;
+    margin:0 30px 10px 0px;
+    border-radius: 10px;
+}
+
+/* Box Placeholder for Future Images
+.box {
+    width: 100%;
+    max-width: 800px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 200px;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+} */
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    background: var(--header-background);
+    color: var(--text-color);
+}
