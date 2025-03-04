@@ -9,27 +9,43 @@
   <body>
     <header>
       <nav>
-        <div class="logo">💬 ChatApp</div>
         <ul>
-          <a href="#"><li>Home</li></a>
-          <a href="profile.html"><li>About</li></a>
+          <div class="menu">🦿</div>
+          <dvi class="search-user">🔍<input type="text" placeholder="search"></dvi>
+          <a href="index.html"><li>Home</li></a>
+          <a href="chats.html"><li>About</li></a>
           <a href="#"><li>Contact</li></a>
         </ul>
+        <div class="logo">💬 ChatApp</div>
       </nav>
     </header>
 
     <main>
-      <div class="inbox-list">
-        <img src="./image/profile.jpg" alt="" class="profile-pic">
-        <h3 class="username">Bewnet</h3>
-        <h4 class="last-seen">Don`t know</h4>
-      </div>
+      <div class="inbox-container">
+        <div class="inbox-list">
+            <img src="./image/profile.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="user-info">
+                <div class="top-row">
+                    <span class="username">Bewnet</span>
+                    <span class="last-time">1:50 PM</span>
+                </div>
+                <div class="bottom-row">
+                    <span class="last-message">eskahun altegegnm I`m doing great. Just working on a project</span>
+                    <span class="unread-count">1</span>
+                </div>
+            </div>
+        </div>
+    
+        <!-- More inbox-list items will be added dynamically here -->
+    </div>
+    
+    
       <div class="chat-box">
         <div class="chat-header">
           <span class="exit-arrow">&lAarr;</span>
           <img src="./image/profile.jpg" alt="User" class="profile-pic" />
-          <h2 class="name">John Doe</h2>
-          <h4 class="status">Online</h4>
+          <h2 class="name">Bewnet</h2>
+          <h4 class="status">O</h4>
           <span class="options">&#9881;</span>
         </div>
 
