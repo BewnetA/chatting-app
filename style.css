@@ -61,14 +61,18 @@ nav ul a:hover {
     top: 0;
     left: 0;
     width: 250px;
-    height: 100vh;
+    height: auto; /* Let it expand based on content */
+    max-height: 100vh; /* Prevent overflow beyond screen height */
+    overflow-y: auto;
     background: #222;
     color: white;
     padding: 20px;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
+    z-index: 1000;
 }
+
 
 .option-bar a {
     display: block;
@@ -404,5 +408,10 @@ main {
         position: absolute;
         top: 0px;
         width: 100%;
+        z-index: 1;
     }
+    .menu{
+        margin-right: 0px;
+    }
+    
 }

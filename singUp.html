@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="singUp.css">
+</head>
+<body>
+    <div class="signup-box">
+        <h2>Create Your Account</h2>
+        <form action="#" method="POST">
+            
+            <!-- User Information -->
+            <fieldset>
+                <legend>Basic Information</legend>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label>Gender</label>
+                <div class="button-group">
+                    <button type="button" class="select-btn" data-value="male">Male</button>
+                    <button type="button" class="select-btn" data-value="female">Female</button>
+                    <button type="button" class="select-btn" data-value="other">Other</button>
+                </div>
+                <input type="hidden" name="gender" id="gender">
+
+                <label for="profile-pic">Profile Picture</label>
+                <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+            </fieldset>
+
+            <!-- Preferences -->
+            <fieldset>
+                <legend>Match Preferences</legend>
+
+                <label>Who do you want to match with?</label>
+                <div class="button-group multiple">
+                    <button type="button" class="multi-select" data-value="men">Men</button>
+                    <button type="button" class="multi-select" data-value="women">Women</button>
+                    <button type="button" class="multi-select" data-value="both">Both</button>
+                </div>
+                <input type="hidden" name="match-preference" id="match-preference">
+
+                <label>What kind of relationship are you looking for?</label>
+                <div class="button-group multiple">
+                    <button type="button" class="multi-select" data-value="relationship">Serious Relationship</button>
+                    <button type="button" class="multi-select" data-value="friendship">Friendship</button>
+                    <button type="button" class="multi-select" data-value="casual">Casual Chat</button>
+                </div>
+                <input type="hidden" name="relationship-type" id="relationship-type">
+
+                <label>Your Interests</label>
+                <div class="button-group multiple">
+                    <button type="button" class="multi-select" data-value="movies">Movies</button>
+                    <button type="button" class="multi-select" data-value="music">Music</button>
+                    <button type="button" class="multi-select" data-value="sports">Sports</button>
+                    <button type="button" class="multi-select" data-value="traveling">Traveling</button>
+                    <button type="button" class="multi-select" data-value="gaming">Gaming</button>
+                    <button type="button" class="multi-select" data-value="books">Books</button>
+                    <button type="button" class="multi-select" data-value="technology">Technology</button>
+                    <button type="button" class="multi-select" data-value="fitness">Fitness</button>
+                </div>
+                <input type="hidden" name="interests" id="interests">
+
+                <label for="bio">Short Bio</label>
+                <textarea id="bio" name="bio" rows="3" placeholder="Tell others a bit about you..."></textarea>
+            </fieldset>
+
+            <button type="submit" class="signup-btn">Sign Up</button>
+            <p class="login-link">Alreay have an account? <a href="signup.html">Login</a></p>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
