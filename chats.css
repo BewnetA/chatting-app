@@ -63,6 +63,7 @@ nav ul a:hover {
     width: 250px;
     height: auto; /* Let it expand based on content */
     max-height: 100vh; /* Prevent overflow beyond screen height */
+    margin-top: 80px;
     overflow-y: auto;
     background: #222;
     color: white;
@@ -294,14 +295,22 @@ main {
 
 /* Chat Board */
 .chat-board {
+    flex-grow: 1;
     padding: 20px;
-    height: 70vh;
-    overflow-y: auto;
+    height: calc(100vh - 160px); /* Adjust height dynamically */
+    overflow-y: auto; /* Enable scrolling */
     display: flex;
     flex-direction: column;
     gap: 10px;
     background: #0a0b0d;
 }
+
+  
+  .no-chat {
+    font-size: 18px;
+    color: #888;
+  }
+  
 
 /* Messages */
 .message {
@@ -407,7 +416,7 @@ main {
     .chat-box{
         position: absolute;
         top: 0px;
-        width: 100%;
+        width: fit-content;
         z-index: 1;
     }
     .menu{
