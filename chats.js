@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatBox = document.querySelector(".chat-box");
     const chatBoard = document.querySelector(".chat-board");
     const exitArrow = document.querySelector(".exit-arrow");
+    document.querySelector(".chat-header").style.display = "none";
 
     // Sample chat data
     const chats = [
@@ -70,13 +71,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             `;
             
-            chatItem.addEventListener("click", () => loadChat(chat));
+            chatItem.addEventListener("click", () =>{ 
+                document.querySelector(".chat-header").style.display = "flex";
+                loadChat(chat);
+            });
             inboxContainer.appendChild(chatItem);
         });
     }
 
     // Load chat messages
     function loadChat(chat) {
+        const name = document.getElementById("name");
+        name.textContent = chat.user;
         chatBoard.innerHTML = "";
         chat.messages.forEach(msg => {
             const msgDiv = document.createElement("div");
@@ -89,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Exit chat view
     exitArrow.addEventListener("click", () => {
+        document.querySelector(".chat-header").style.display = "none";
         chatBoard.innerHTML = '<p class="no-chat">Select a chat to start messaging</p>';
         chatBox.classList.remove("active");
     });

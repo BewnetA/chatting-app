@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat App</title>
     <link rel="stylesheet" href="chats.css" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="chats.js" defer></script>
   </head>
   <body>
@@ -12,33 +14,33 @@
       <nav>
         <ul>
           <div class="menu">
-            🦿
+            <ion-icon name="menu-outline"></ion-icon>
             <div class="option-bar">
-              <a href="#">Profile</a>
-              <a href="#">Settings</a>
-              <a href="#">Logout</a>
+              <a href="#">Profile <ion-icon name="person-circle-outline"></ion-icon></a>
+              <a href="#">Settings <ion-icon name="settings-outline"></ion-icon></a>
+              <a href="#">Logout <ion-icon name="log-out-outline"></ion-icon></a>
             </div>
           </div>
           <dvi class="search-user"
-            >🔍<input type="text" placeholder="search"
+            ><ion-icon name="search-outline"></ion-icon><input type="text" placeholder="search"
           /></dvi>
           <a href="index.html"><li>Home</li></a>
           <a href="chats.html"><li>About</li></a>
           <a href="#"><li>Contact</li></a>
         </ul>
-        <div class="logo">💬 ChatApp</div>
+        <!-- <div class="logo">💬 ChatApp</div> -->
       </nav>
     </header>
 
     <main>
       <div class="inbox-container">
         <div class="inbox-list">
-          <img
+          <!--<img
             src="./image/profile.jpg"
             alt="Profile Picture"
             class="profile-pic"
           />
-          <div class="user-info">
+           <div class="user-info">
             <div class="top-row">
               <span class="username">Bewnet</span>
               <span class="last-time">1:50 PM</span>
@@ -49,7 +51,7 @@
                 project</span
               >
               <span class="unread-count">1</span>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -58,15 +60,16 @@
 
       <div class="chat-box">
         <div class="chat-header">
-          <span class="exit-arrow">&lAarr;</span>
+          <span class="exit-arrow"><ion-icon name="arrow-back-outline"></ion-icon></span>
           <img src="./image/profile.jpg" alt="User" class="profile-pic" />
-          <h2 class="name">Bewnet</h2>
-          <h4 class="status">O</h4>
-          <span class="options">&#9881;</span>
+          <h2 id="name"></h2>
+          <h4 class="status">Online</h4>
+          <span class="options"><ion-icon name="menu-outline"></ion-icon></span>
         </div>
 
         <!-- Chat Messages -->
         <div class="chat-board">
+          <!-- Content will be added dynamically -->
         </div>
 
         <!-- Message Input -->

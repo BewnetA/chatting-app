@@ -14,7 +14,7 @@ body {
 /* Header */
 header {
     background: #1c1e26;
-    padding: 15px 20px;
+    padding: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +63,7 @@ nav ul a:hover {
     width: 250px;
     height: auto; /* Let it expand based on content */
     max-height: 100vh; /* Prevent overflow beyond screen height */
-    margin-top: 80px;
+    margin-top: 50px;
     overflow-y: auto;
     background: #222;
     color: white;
@@ -416,7 +416,7 @@ main {
     .chat-box{
         position: absolute;
         top: 0px;
-        width: fit-content;
+        width: 100%;
         z-index: 1;
     }
     .menu{
