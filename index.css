@@ -59,7 +59,7 @@ header ul a:hover {
     color: var(--primary-color);
 }
 
-button.sing-up {
+/* button.sing-up {
     background: var(--button-bg);
     color: var(--text-color);
     border-radius: 8px;
@@ -70,10 +70,10 @@ button.sing-up {
     transition: background 0.3s;
 }
 
-button.sing-up:hover{
+button.sing-up:hover {
     background-color: var(--primary-color);
     color: #000;
-}
+} */
 
 /* Hero Section */
 .background.intro-image {
@@ -102,11 +102,6 @@ button {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
-}
-
-button a{
-    text-decoration: none;
-    color: var(--text-color);
 }
 
 button:hover {
@@ -179,3 +174,64 @@ footer {
     background: var(--header-background);
     color: var(--text-color);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav {
+      flex-direction: column;
+    }
+  
+    nav ul {
+      flex-direction: row;
+      padding: 10px 0;
+    }
+  
+    nav ul a {
+      display: block;
+      padding: 10px 0;
+    }
+  
+    .intro-image h1 {
+      font-size: 1.5rem;
+    }
+  
+    .intro-image {
+      padding: 50px 10px;
+    }
+  
+    .sing-up {
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 10px;
+    }
+  
+    .logo {
+      font-size: 1.2rem;
+    }
+  
+    nav ul a {
+      padding: 5px;
+    }
+  
+    .intro-image {
+      padding: 40px 10px;
+    }
+  
+    .intro-image h1 {
+      font-size: 1.2rem;
+    }
+  
+    section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
