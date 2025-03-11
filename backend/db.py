@@ -19,11 +19,24 @@ async def create_db():
             # Create users table
             await connection.execute("""
                 CREATE TABLE IF NOT EXISTS users (
-                    user_id BIGINT PRIMARY KEY,
+                    user_id SERIAL PRIMARY KEY,
                     username VARCHAR(255),
                     first_name VARCHAR(255),
-                    job_titles TEXT,
-                    job_types VARCHAR(255)
+                    email VARCHAR(255),
+                    gender VARCHAR(10),
+                    date_of_birth DATE,
+                    password VARCHAR(256),
+                );
+            """)
+            await connection.execute("""
+                CREATE TABLE IF NOT EXISTS preference (
+                    user_id int FOREIGN KEY,
+                    username VARCHAR(255),
+                    first_name VARCHAR(255),
+                    email VARCHAR(255),
+                    gender VARCHAR(10),
+                    date_of_birth DATE,
+                    password VARCHAR(256),
                 );
             """)
            
@@ -47,8 +60,8 @@ async def add_user(user_id: int, username: str, first_name: str, titles: str, ty
     finally:
         await pool.close()  # Close the pool after the operation
 
-# Function to insert dummy data into the database for testing
-async def insert_dummy_data():
-    await add_user(1, "john_doe", "John", "Developer, AI", "remote")
-    await add_user(2, "jane_smith", "Jane", "Accountant, sales", "remote")
-    await add_user(3, "alice_jones", "Alice", "Security", "on-site")
+# # Function to insert dummy data into the database for testing
+# async def insert_dummy_data():
+#     await add_user(1, "john_doe", "John", "Developer, AI", "remote")
+#     await add_user(2, "jane_smith", "Jane", "Accountant, sales", "remote")
+#     await add_user(3, "alice_jones", "Alice", "Security", "on-site")
