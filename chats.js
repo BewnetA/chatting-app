@@ -70,7 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
             `;
-            
+            chatItem.classList.add("active")
+
             chatItem.addEventListener("click", () =>{ 
                 document.querySelector(".chat-header").style.display = "flex";
                 loadChat(chat);
@@ -95,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Exit chat view
     exitArrow.addEventListener("click", () => {
+
         document.querySelector(".chat-header").style.display = "none";
         chatBoard.innerHTML = '<p class="no-chat">Select a chat to start messaging</p>';
         chatBox.classList.remove("active");
